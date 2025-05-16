@@ -3,7 +3,7 @@ import Link from "next/link";
 
 // INTERNAL IMPORT
 import { CrowdFundingContext } from "../Context/CroudFunding.js";
-import { Logo, Menu } from "../components/index";
+import { Logo, Menu } from "./index";
 
 const NavBar = () => {
   const { currentAccount, connectWallet } = useContext(CrowdFundingContext);

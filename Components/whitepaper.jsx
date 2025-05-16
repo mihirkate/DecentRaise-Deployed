@@ -1,53 +1,49 @@
 import React from "react";
 
-const WhitePaper = ({ title, content, sidebarItems }) => {
-  const handleDownload = () => {
-    window.print();
-  };
+const WhitePaper = () => {
   return (
-    <div className="max-w-7xl mx-auto grid grid-cols-12 gap-4 px-4 py-8">
-      {/* Sidebar */}
-      <aside className="col-span-3 bg-gray-100 p-4 rounded-lg ">
-        <h2 className="text-xl font-semibold mb-2">Introduction</h2>
-        <ul className="space-y-2 font-semibold text-xl">
-          {sidebarItems.map((item, index) => (
-            <li key={index}>
-              <a
-                href={`#${item.id}`}
-                className="text-black-500 hover:underline text-xl font-semibold"
-              >
-                {item.title}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </aside>
+    <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto">
+        <h1 className="text-4xl font-bold text-gray-900 mb-8">
+          DecentRaise Whitepaper
+        </h1>
+        <div className="bg-white shadow overflow-hidden sm:rounded-lg p-6">
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+            Introduction
+          </h2>
+          <p className="text-gray-600 mb-6">
+            DecentRaise is a decentralized crowdfunding platform built on
+            blockchain technology, enabling transparent and trustless
+            fundraising for projects worldwide.
+          </p>
 
-      {/* Main Content */}
-      <main className="col-span-9">
-        <h1 className="text-3xl font-bold mb-4">{title}</h1>
-        <div className="flex justify-between items-center mb-6">
-          <button
-            className="bg-gray-900 text-white px-6 py-3 rounded-lg font-semibold"
-            onClick={handleDownload}
-          >
-            Download PDF
-          </button>
-          <select className="border rounded px-2 py-1">
-            <option>English</option>
-            {/* Add more languages as needed */}
-          </select>
-        </div>
+          {/* Add more sections as needed */}
+          <div className="space-y-6">
+            <section>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                Problem Statement
+              </h3>
+              <p className="text-gray-600">
+                Traditional crowdfunding platforms face challenges with
+                transparency, trust, and high fees. DecentRaise addresses these
+                issues through blockchain technology and smart contracts.
+              </p>
+            </section>
 
-        {content.map((section, index) => (
-          <div key={index}>
-            <h2 id={section.id} className="text-2xl font-semibold mb-2">
-              {section.title}
-            </h2>
-            <p className="mb-4">{section.text}</p>
+            <section>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                Solution
+              </h3>
+              <p className="text-gray-600">
+                Our platform leverages blockchain technology to create a
+                transparent, efficient, and secure crowdfunding ecosystem where
+                project creators and backers can interact directly without
+                intermediaries.
+              </p>
+            </section>
           </div>
-        ))}
-      </main>
+        </div>
+      </div>
     </div>
   );
 };
