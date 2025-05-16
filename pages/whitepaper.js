@@ -1,4 +1,4 @@
-import WhitePaper from "../components/WhitePaper";
+import WhitePaper from "../Components/WhitePaper";
 
 const WhitePaperPage = () => {
     const title = "The Sky Protocol: Sky's Multi-Collateral Dai (MCD) System";
