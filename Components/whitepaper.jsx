@@ -9,7 +9,7 @@ const WhitePaper = () => {
         </h1>
         <div className="bg-white shadow overflow-hidden sm:rounded-lg p-6">
           <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-            Introduction
+            Introduction To White Paper
           </h2>
           <p className="text-gray-600 mb-6">
             DecentRaise is a decentralized crowdfunding platform built on
